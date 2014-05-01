@@ -1,9 +1,11 @@
 package org.archphantom.shenanigans.elements;
+import java.io.Serializable;
 import java.util.Hashtable;
 import org.archphantom.shenanigans.elements.values.Namespace;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
-public class Program implements Runnable {
+public class Program implements Runnable, Serializable {
+	private static final long serialVersionUID = 4309390632410676282L;
 	private VarTable globalVars;
 	private Hashtable<String, Namespace> namespaces;
 	
