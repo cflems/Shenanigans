@@ -9,7 +9,7 @@ import org.archphantom.shenanigans.elements.expressions.statements.Assignment;
 import org.archphantom.shenanigans.elements.expressions.statements.FunctionCall;
 import org.archphantom.shenanigans.elements.expressions.statements.Group;
 import org.archphantom.shenanigans.elements.expressions.statements.IfElse;
-import org.archphantom.shenanigans.elements.expressions.statements.Print;
+import org.archphantom.shenanigans.elements.expressions.statements.PrintLn;
 import org.archphantom.shenanigans.elements.values.Array;
 import org.archphantom.shenanigans.elements.values.DecimalValue;
 import org.archphantom.shenanigans.elements.values.Function;
@@ -24,7 +24,7 @@ public class CheckIt {
 		ArrayList<String> argnames = new ArrayList<String>();
 		argnames.add("x");
 		ArrayList<Expression> checkit_expr_body = new ArrayList<Expression>();
-		checkit_expr_body.add(new IfElse(new BoolGreater(new Variable("x"), new IntValue("0")), new Print(new Array("True\n")), new Print(new Array("False\n"))));
+		checkit_expr_body.add(new IfElse(new BoolGreater(new Variable("x"), new IntValue("0")), new PrintLn(new Array("True")), new PrintLn(new Array("False"))));
 		Group checkit_body = new Group(checkit_expr_body);
 		Function checkit = new Function(argnames, checkit_body);
 		list.add(new Assignment("checkit", checkit));
