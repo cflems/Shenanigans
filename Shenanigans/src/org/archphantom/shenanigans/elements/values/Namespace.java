@@ -23,7 +23,7 @@ public class Namespace extends Value {
 			String nspacecall = identifier.substring(0, identifier.indexOf('.'));
 			String varname = identifier.substring(identifier.indexOf('.')+1);
 			Value vns;
-			if ((vns = myvars.get(nspacecall).evaluate(vars, program)) != null) {
+			if ((vns = myvars.get(nspacecall)) != null) {
 				if (vns instanceof Namespace) {
 					Namespace ns = (Namespace) vns;
 					return ns.getVar(varname, vars, program);
@@ -38,12 +38,12 @@ public class Namespace extends Value {
 		}
 	}
 	
-	public Value setVar (String identifier, Expression value, VarTable vars, Program program) {
+	public Value setVar (String identifier, Value value, VarTable vars, Program program) {
 		if (identifier.contains(".")) {
 			String nspacecall = identifier.substring(0, identifier.indexOf('.'));
 			String varname = identifier.substring(identifier.indexOf('.')+1);
 			Value vns;
-			if ((vns = myvars.get(nspacecall).evaluate(vars, program)) != null) {
+			if ((vns = myvars.get(nspacecall)) != null) {
 				if (vns instanceof Namespace) {
 					Namespace ns = (Namespace) vns;
 					return ns.setVar(varname, value, vars, program);
@@ -54,7 +54,7 @@ public class Namespace extends Value {
 				return null;
 			}
 		} else {
-			return vars.get(identifier).evaluate(vars, program);
+			return myvars.set(identifier, value);
 		}
 	}
 	

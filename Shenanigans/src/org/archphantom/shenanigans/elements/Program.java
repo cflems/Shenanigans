@@ -1,6 +1,8 @@
 package org.archphantom.shenanigans.elements;
 import java.io.Serializable;
 import java.util.Hashtable;
+
+import org.archphantom.shenanigans.elements.expressions.statements.NamespaceCall;
 import org.archphantom.shenanigans.elements.values.Namespace;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
@@ -18,11 +20,12 @@ public class Program implements Runnable, Serializable {
 		return namespaces.get(name.toLowerCase());
 	}
 	
+	public VarTable getGlobalVars () {
+		return globalVars;
+	}
+	
 	public void run () {
-		Namespace ns;
-		if ((ns = namespaces.get("main")) != null) {
-			ns.getValue(globalVars, this);
-		}
+		new NamespaceCall("main").evaluate(globalVars, this);
 	}
 	
 }

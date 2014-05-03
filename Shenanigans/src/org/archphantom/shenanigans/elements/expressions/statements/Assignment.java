@@ -20,7 +20,8 @@ public class Assignment extends Expression {
 			String varname = identifier.substring(identifier.indexOf('.')+1);
 			Namespace ns;
 			if ((ns = program.getNamespace(nspacecall)) != null) {
-				return ns.setVar(varname, value, vars, program);
+				Value val = value.evaluate(vars, program);
+				return ns.setVar(varname, val, vars, program);
 			} else {
 				return null;
 			}

@@ -1,6 +1,5 @@
 package org.archphantom.shenanigans.elements.expressions.statements;
 import java.util.ArrayList;
-
 import org.archphantom.shenanigans.elements.Program;
 import org.archphantom.shenanigans.elements.expressions.Expression;
 import org.archphantom.shenanigans.elements.expressions.Variable;
@@ -28,10 +27,9 @@ public class FunctionCall extends Expression {
 				localVars.set(argNames.get(i), arguments.get(i).evaluate(vars, program));
 			}
 			Value retval = function.getValue(localVars, program);
-			System.out.println("Function returned a "+retval.getClass().getSimpleName()+": "+retval.hashCode());
 			return retval;
 		} else {
-			throw new RuntimeException("No such function exists.");
+			throw new RuntimeException("No such function exists: "+identifier+".");
 		}
 	}
 	
