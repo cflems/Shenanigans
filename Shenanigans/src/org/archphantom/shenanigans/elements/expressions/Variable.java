@@ -17,12 +17,17 @@ public class Variable extends Expression {
 			String varname = identifier.substring(identifier.indexOf('.')+1);
 			Namespace ns;
 			if ((ns = program.getNamespace(nspacecall)) != null) {
-				return ns.getVar(varname, vars, program).evaluate(vars, program);
+				return ns.getVar(varname, vars, program);
 			} else {
-				return null;
+				throw new RuntimeException("No such variable: "+identifier);
 			}
 		} else {
-			return vars.get(identifier).evaluate(vars, program);
+			Value val;
+			if ((val = vars.get(identifier)) != null) {
+				return val;
+			} else {
+				throw new RuntimeException("No such variable: "+identifier);
+			}
 		}
 	}
 	

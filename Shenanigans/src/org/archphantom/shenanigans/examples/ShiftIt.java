@@ -14,12 +14,13 @@ import org.archphantom.shenanigans.elements.expressions.statements.Assignment;
 import org.archphantom.shenanigans.elements.expressions.statements.ForLoop;
 import org.archphantom.shenanigans.elements.expressions.statements.FunctionCall;
 import org.archphantom.shenanigans.elements.expressions.statements.Group;
-import org.archphantom.shenanigans.elements.expressions.statements.Print;
+import org.archphantom.shenanigans.elements.expressions.statements.PrintLn;
 import org.archphantom.shenanigans.elements.values.Array;
 import org.archphantom.shenanigans.elements.values.CharValue;
 import org.archphantom.shenanigans.elements.values.Function;
 import org.archphantom.shenanigans.elements.values.IntValue;
 import org.archphantom.shenanigans.elements.values.Namespace;
+import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class ShiftIt {
@@ -29,13 +30,15 @@ public class ShiftIt {
 		ArrayList<String> argnames = new ArrayList<String>();
 		argnames.add("a");
 		ArrayList<Expression> shiftit_expr_body = new ArrayList<Expression>(3);
-		shiftit_expr_body.add(new ForLoop(new Assignment("l", new IntValue("0")), new BoolLess(new Variable("l"), new Subtraction(new Count(new Variable("a")), new IntValue("1"))), new Assignment("l", new Addition(new Variable("l"), new IntValue("1"))), new ArrayAssignment("a", new Variable("l"), new Addition(new ArrayVariable("a", new Variable("l")), new IntValue("1")))));
+		shiftit_expr_body.add(new Assignment("tmp", new ArrayVariable("a", new IntValue("0"))));
+		shiftit_expr_body.add(new ForLoop(new Assignment("l", new IntValue("0")), new BoolLess(new Variable("l"), new Subtraction(new Count(new Variable("a")), new IntValue("1"))), new Assignment("l", new Addition(new Variable("l"), new IntValue("1"))), new ArrayAssignment("a", new Variable("l"), new ArrayVariable("a", new Addition(new Variable("l"), new IntValue("1"))))));
+		shiftit_expr_body.add(new ArrayAssignment("a", new Subtraction(new Count(new Variable("a")), new IntValue("1")), new Variable("tmp")));
 		shiftit_expr_body.add(new Variable("a"));
 		Group shiftit_body = new Group(shiftit_expr_body);
 		Function shiftit = new Function(argnames, shiftit_body);
 		list.add(new Assignment("shiftit", shiftit));
 		ArrayList<Expression> arguments = new ArrayList<Expression>(1);
-		ArrayList<Expression> elements = new ArrayList<Expression>(4);
+		ArrayList<Value> elements = new ArrayList<Value>(4);
 		elements.add(new IntValue("3"));
 		elements.add(new IntValue("6"));
 		elements.add(new IntValue("9"));
@@ -44,7 +47,7 @@ public class ShiftIt {
 		ArrayList<Expression> to_print = new ArrayList<Expression>(2);
 		to_print.add(new FunctionCall("shiftit", arguments));
 		to_print.add(new CharValue('\n'));
-		list.add(new Print(new Array(to_print)));
+		list.add(new PrintLn(new FunctionCall("shiftit", arguments)));
 		Group group = new Group(list);
 		Namespace main = new Namespace("main", group, new VarTable());
 		Hashtable<String, Namespace> namespaces = new Hashtable<String, Namespace>();

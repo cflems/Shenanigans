@@ -1,20 +1,20 @@
 package org.archphantom.shenanigans.elements.variables;
 import java.util.Hashtable;
-import org.archphantom.shenanigans.elements.expressions.Expression;
+import org.archphantom.shenanigans.elements.values.Value;
 
 public class VarTable {
-	private Hashtable<String, Expression> vars;
+	private Hashtable<String, Value> vars;
 	
 	public VarTable () {
-		vars = new Hashtable<String, Expression>();
+		vars = new Hashtable<String, Value>();
 	}
 	
-	public Expression set (String identifier, Expression value) {
+	public Value set (String identifier, Value value) {
 		vars.put(identifier, value);
 		return value;
 	}
 	
-	public Expression get (String identifier) {
+	public Value get (String identifier) {
 		return vars.get(identifier);
 	}
 	

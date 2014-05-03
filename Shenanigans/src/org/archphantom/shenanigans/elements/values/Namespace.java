@@ -18,7 +18,7 @@ public class Namespace extends Value {
 		return name;
 	}
 	
-	public Expression getVar (String identifier, VarTable vars, Program program) {
+	public Value getVar (String identifier, VarTable vars, Program program) {
 		if (identifier.contains(".")) {
 			String nspacecall = identifier.substring(0, identifier.indexOf('.'));
 			String varname = identifier.substring(identifier.indexOf('.')+1);

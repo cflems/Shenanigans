@@ -26,7 +26,7 @@ public class ArrayVariable extends Expression {
 		Value varr = new Variable(identifier).evaluate(vars, program);
 		if (varr instanceof Array) {
 			Array array = (Array) varr;
-			return array.getElement(iindex, vars, program).evaluate(vars, program);
+			return array.getElement(iindex, vars, program);
 		} else {
 			throw new RuntimeException("Not Implemented");
 		}
