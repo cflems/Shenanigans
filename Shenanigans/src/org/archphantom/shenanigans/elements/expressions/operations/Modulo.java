@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Modulo extends Expression {
+	private static final long serialVersionUID = -2671899717634736876L;
 	private Expression a, b;
 	
 	public Modulo (Expression a, Expression b) {

@@ -5,6 +5,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Variable extends Expression {
+	private static final long serialVersionUID = -8173453928428573742L;
 	private String identifier;
 	
 	public Variable (String identifier) {

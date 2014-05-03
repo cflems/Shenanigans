@@ -7,6 +7,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class BoolLess extends Expression {
+	private static final long serialVersionUID = -3533910924781947837L;
 	private Expression a, b;
 	
 	public BoolLess (Expression a, Expression b) {

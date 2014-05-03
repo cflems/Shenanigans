@@ -7,7 +7,8 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public abstract class ConditionalStatement extends Expression {
-	
+	private static final long serialVersionUID = 6177224116883281628L;
+
 	boolean boolify (Expression expr, VarTable vars, Program program) {
 		Value val = expr.evaluate(vars, program);
 		if (val instanceof BoolValue) {

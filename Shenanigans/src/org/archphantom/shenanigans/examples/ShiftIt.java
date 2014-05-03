@@ -25,7 +25,7 @@ import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class ShiftIt {
 	
-	public static void main (String[] args) {
+	public static Program buildExample () {
 		ArrayList<Expression> list = new ArrayList<Expression>();
 		ArrayList<String> argnames = new ArrayList<String>();
 		argnames.add("a");
@@ -52,8 +52,11 @@ public class ShiftIt {
 		Namespace main = new Namespace("main", group, new VarTable());
 		Hashtable<String, Namespace> namespaces = new Hashtable<String, Namespace>();
 		namespaces.put("main", main);
-		Program p = new Program(namespaces);
-		p.run();
+		return new Program(namespaces);		
+	}
+	
+	public static void main (String[] args) {
+		buildExample().run();
 	}
 
 }

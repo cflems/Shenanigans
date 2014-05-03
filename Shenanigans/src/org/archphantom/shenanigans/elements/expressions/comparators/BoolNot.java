@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class BoolNot extends Expression {
+	private static final long serialVersionUID = 8925098393357319876L;
 	private BoolValue val;
 	
 	public BoolNot (BoolValue val) {

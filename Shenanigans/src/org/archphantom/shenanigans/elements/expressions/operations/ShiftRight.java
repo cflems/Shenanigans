@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class ShiftRight extends Expression {
+	private static final long serialVersionUID = -2844155062825487257L;
 	private Expression a, b;
 	
 	public ShiftRight (Expression a, Expression b) {

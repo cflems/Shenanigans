@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class BitAnd extends Expression {
+	private static final long serialVersionUID = 628380389054082502L;
 	private Expression a, b;
 	
 	public BitAnd (Expression a, Expression b) {

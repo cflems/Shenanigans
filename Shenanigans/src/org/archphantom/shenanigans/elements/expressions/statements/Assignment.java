@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Assignment extends Expression {
+	private static final long serialVersionUID = 7206490732056473577L;
 	private String identifier;
 	private Expression value;
 	

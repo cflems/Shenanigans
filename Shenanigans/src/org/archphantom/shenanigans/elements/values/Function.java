@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.expressions.Expression;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Function extends Value {
+	private static final long serialVersionUID = -6290598231971188194L;
 	private ArrayList<String> arguments;
 	private Expression body;
 	

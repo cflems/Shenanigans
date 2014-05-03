@@ -1,8 +1,10 @@
 package org.archphantom.shenanigans.elements.variables;
+import java.io.Serializable;
 import java.util.Hashtable;
 import org.archphantom.shenanigans.elements.values.Value;
 
-public class VarTable {
+public class VarTable implements Serializable {
+	private static final long serialVersionUID = 7310223054349729170L;
 	private Hashtable<String, Value> vars;
 	
 	public VarTable () {

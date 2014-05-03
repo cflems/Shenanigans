@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class BoolEqual extends Expression {
+	private static final long serialVersionUID = 4474177294066408100L;
 	private Expression a, b;
 	
 	public BoolEqual (Expression a, Expression b) {

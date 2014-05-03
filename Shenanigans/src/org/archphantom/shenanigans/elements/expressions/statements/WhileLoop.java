@@ -5,6 +5,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class WhileLoop extends ConditionalStatement {
+	private static final long serialVersionUID = 2550160732857284210L;
 	private Expression condition;
 	private Expression evaluate;
 	

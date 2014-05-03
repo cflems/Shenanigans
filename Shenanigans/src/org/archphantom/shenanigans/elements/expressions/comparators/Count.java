@@ -7,6 +7,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Count extends Expression {
+	private static final long serialVersionUID = -491231132081798904L;
 	private Expression val;
 	
 	public Count (Expression val) {

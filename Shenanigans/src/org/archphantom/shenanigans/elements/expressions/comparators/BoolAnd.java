@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class BoolAnd extends Expression {
+	private static final long serialVersionUID = -2352274778863145062L;
 	private Expression a, b;
 	
 	public BoolAnd (Expression a, Expression b) {

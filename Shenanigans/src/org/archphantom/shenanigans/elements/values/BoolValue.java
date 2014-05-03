@@ -3,6 +3,7 @@ import org.archphantom.shenanigans.elements.Program;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class BoolValue extends Value {
+	private static final long serialVersionUID = 531596655233771451L;
 	private boolean val;
 	
 	public BoolValue (boolean val) {

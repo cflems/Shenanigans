@@ -7,11 +7,11 @@ import org.archphantom.shenanigans.elements.values.IntValue;
 import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
-public class Print extends Expression {
-	private static final long serialVersionUID = -6703606908464950567L;
+public class PrintLn extends Expression {
+	private static final long serialVersionUID = 2521386078966318842L;
 	private Expression data;
 	
-	public Print (Expression data) {
+	public PrintLn (Expression data) {
 		this.data = data;
 	}
 		
@@ -23,7 +23,7 @@ public class Print extends Expression {
 			for (int i = 0; i < arr.size(); i++) {
 				Value val = arr.getElement(new IntValue(BigInteger.valueOf(i)), vars, program).evaluate(vars, program);
 				if (val instanceof Array) {
-					new Print ((Array) val).evaluate(vars, program);
+					new PrintLn ((Array) val).evaluate(vars, program);
 				} else {
 					System.out.print(val.getValue(vars, program).toString());
 				}
@@ -35,6 +35,7 @@ public class Print extends Expression {
 		} else {
 			System.out.print(vdata.getValue(vars, program).toString());
 		}
+		System.out.print('\n');
 		return vdata;
 	}
 	

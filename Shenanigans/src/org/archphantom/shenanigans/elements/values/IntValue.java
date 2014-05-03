@@ -6,7 +6,8 @@ import org.archphantom.shenanigans.elements.Program;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class IntValue extends DecimalValue {
-	
+	private static final long serialVersionUID = 755770306873491835L;
+
 	public IntValue (int val) {
 		super(new BigDecimal(val));
 	}

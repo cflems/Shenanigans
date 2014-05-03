@@ -9,6 +9,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class ArrayVariable extends Expression {
+	private static final long serialVersionUID = 7616065946751354435L;
 	private String identifier;
 	private Expression index;
 	

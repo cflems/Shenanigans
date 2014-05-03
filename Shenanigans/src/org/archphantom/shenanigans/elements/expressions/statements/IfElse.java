@@ -5,6 +5,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class IfElse extends ConditionalStatement {
+	private static final long serialVersionUID = 5036859013313773084L;
 	private Expression condition;
 	private Expression evalTrue;
 	private Expression evalFalse;

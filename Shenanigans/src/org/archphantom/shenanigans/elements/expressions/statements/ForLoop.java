@@ -5,6 +5,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class ForLoop extends ConditionalStatement {
+	private static final long serialVersionUID = 4620309283857707757L;
 	private Expression initializer;
 	private Expression condition;
 	private Expression iterator;

@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class BoolXOr extends Expression {
+	private static final long serialVersionUID = -4779123555276431149L;
 	private Expression a, b;
 	
 	public BoolXOr (Expression a, Expression b) {

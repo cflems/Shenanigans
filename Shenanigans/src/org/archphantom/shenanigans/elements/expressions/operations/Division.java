@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Division extends Expression {
+	private static final long serialVersionUID = 1824475991821919043L;
 	private Expression a, b;
 	
 	public Division (Expression a, Expression b) {

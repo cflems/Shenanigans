@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Subtraction extends Expression {
+	private static final long serialVersionUID = 7561035138901827673L;
 	private Expression a, b;
 	
 	public Subtraction (Expression a, Expression b) {

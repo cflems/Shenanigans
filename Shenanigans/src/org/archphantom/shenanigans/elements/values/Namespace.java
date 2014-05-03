@@ -4,6 +4,7 @@ import org.archphantom.shenanigans.elements.expressions.Expression;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Namespace extends Value {
+	private static final long serialVersionUID = -4934489810223937971L;
 	private String name;
 	private Expression body;
 	private VarTable myvars;

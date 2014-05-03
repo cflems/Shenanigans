@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.variables.VarTable;
 
 
 public class If extends ConditionalStatement {
+	private static final long serialVersionUID = -8033692342706309763L;
 	private Expression condition;
 	private Expression evaluate;
 	

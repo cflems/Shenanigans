@@ -7,6 +7,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Group extends Expression {
+	private static final long serialVersionUID = -9092529908335757782L;
 	private ArrayList<Expression> items;
 	
 	public Group (ArrayList<Expression> items) {

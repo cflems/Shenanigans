@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Multiplication extends Expression {
+	private static final long serialVersionUID = 3043564671424224124L;
 	private Expression a, b;
 	
 	public Multiplication (Expression a, Expression b) {

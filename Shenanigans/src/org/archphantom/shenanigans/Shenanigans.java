@@ -75,12 +75,14 @@ public class Shenanigans {
 	}
 	
 	public static void parse (InputStream stream) throws IOException {
+		/*
 		String data = "";
 		int b;
 		while ((b = stream.read()) != -1) {
 			data += (char) b;
 		}
 		// Interact with parser
+		 */
 	}
 	
 }

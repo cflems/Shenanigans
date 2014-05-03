@@ -8,6 +8,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class FunctionCall extends Expression {
+	private static final long serialVersionUID = -5711425379993291311L;
 	private String identifier;
 	private ArrayList<Expression> arguments;
 	

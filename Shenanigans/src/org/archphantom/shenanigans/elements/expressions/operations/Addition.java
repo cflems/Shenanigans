@@ -6,6 +6,7 @@ import org.archphantom.shenanigans.elements.values.Value;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Addition extends Expression {
+	private static final long serialVersionUID = 386833200254543112L;
 	private Expression a, b;
 	
 	public Addition (Expression a, Expression b) {

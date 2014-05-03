@@ -4,6 +4,7 @@ import org.archphantom.shenanigans.elements.Program;
 import org.archphantom.shenanigans.elements.variables.VarTable;
 
 public class Array extends Value {
+	private static final long serialVersionUID = -1094670284231123418L;
 	private ArrayList<Value> vals;
 	
 	public Array () {
