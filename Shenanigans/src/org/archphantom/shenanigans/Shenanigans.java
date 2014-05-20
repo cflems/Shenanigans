@@ -27,7 +27,7 @@ public class Shenanigans {
 					System.out.println(HELP_STRING);
 					return;
 				}
-				if ((args[i].equals("-p") || args[i].equalsIgnoreCase("--PARSED")) && (i+1) < args.length) {
+				if ((args[i].equals("-p") || args[i].equalsIgnoreCase("--parsed")) && (i+1) < args.length) {
 					pstreams.add(new FileInputStream(args[i+1]));
 					useparsed = true;
 				}
