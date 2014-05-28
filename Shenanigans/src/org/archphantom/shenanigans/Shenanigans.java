@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import org.archphantom.shenanigans.elements.Program;
+import org.archphantom.shenanigans.parser.Parser;
+import org.archphantom.shenanigans.parser.Tokenizer;
 
 public class Shenanigans {
 	private static final String HELP_STRING = "############################### Shenanigans Help ###############################\r\n"
@@ -75,14 +77,9 @@ public class Shenanigans {
 	}
 	
 	public static void parse (InputStream stream) throws IOException {
-		/*
-		String data = "";
-		int b;
-		while ((b = stream.read()) != -1) {
-			data += (char) b;
-		}
-		// Interact with parser
-		 */
+		Parser parser = new Parser(new Tokenizer(stream));
+		Program program = parser.program();
+		program.run();
 	}
 	
 }
