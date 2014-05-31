@@ -1,31 +1,41 @@
 package org.archphantom.shenanigans.parser;
 
 public enum Token {
-	Number, //
-	Decimal, //
-	Ident, //
-	EOS, //
-	Plus, //
-	Minus, //
-	Times, //
-	Divide, //
-	Modulo, //
-	LParen, //
-	RParen, //
-	LBrace, //
-	RBrace, //
-	LCBracket, //
-	RCBracket, //
-	Semicolon, //
-	Quote, //
-	DQuote, //
-	And, //
-	Or, //
-	Not, //
-	XOr, //
-	Equal, //
-	Less, //
-	Greater, //
-	Count, //
-	NSCall //
+	Number,
+	Decimal,
+	Ident,
+	EOS,
+	Plus,
+	Minus,
+	Times,
+	Divide,
+	Modulo,
+	LParen,
+	RParen,
+	LBrace,
+	RBrace,
+	LCBracket,
+	RCBracket,
+	Semicolon,
+	Quote,
+	DQuote,
+	And,
+	Or,
+	Not,
+	XOr,
+	Equal,
+	Less,
+	Greater,
+	Count,
+	NSCall,
+	RS_For,
+	RS_While,
+	RS_If,
+	RS_Else,
+	RS_Print,
+	RS_PrintLn,
+	RS_Function,
+	RS_Namespace,
+	RS_True,
+	RS_False,
 }
