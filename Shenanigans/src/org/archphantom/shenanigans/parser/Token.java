@@ -3,6 +3,7 @@ package org.archphantom.shenanigans.parser;
 public enum Token {
 	Number,
 	Decimal,
+	Char,
 	Ident,
 	EOS,
 	Plus,
